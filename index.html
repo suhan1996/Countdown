@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>谁能先到？60kg v. 80kg</title>
+</head>
+<body>
+
+<p>2020年4月26日，SH和Zining打赌，谁能先达到理想体重（SH是80公斤，Zining是60公斤）</p>
+<p>赢的人可以享受对方买单的五星级晚餐，一言既出，驷马难追，于是我做了这个倒计时以表决心</p>
+<p>离SH和Zining约定的体重battle日期还有:</p>
+
+<p id="demo"></p>
+
+<p>签字画押：SH，Zining</p>
+
+
+<script>
+    setInterval(function(){
+    var d = new Date().getTime();
+    var d_togo = 1609373520000-d
+    var day = parseInt(d_togo/86400000)
+    var hour = parseInt((d_togo%86400000)/3600000)
+    var min = parseInt(((d_togo%3600000)/60000))
+    var sec = parseInt(((d_togo%60000)/1000))
+
+    document.getElementById("demo").innerHTML = day+"天"+hour+"小时"+min+"分钟"+sec+"秒";},500
+    )
+</script>
+
+</body>
+
+<script>
+
+</script>
+</html>
